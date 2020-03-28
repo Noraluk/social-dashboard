@@ -133,7 +133,10 @@ func GetWordClouds(c echo.Context) error {
 	wordcut := m.NewWordcut(dict)
 	reg, err := regexp.Compile("[^\u0E00-\u0E7Fa-zA-Z0-9]+")
 	if err != nil {
-		log.Fatal(err)
+		log.Println("regexp compile error : ", err)
+		return c.JSON(http.StatusInternalServerError, map[string]interface{}{
+			"message": "error",
+		})
 	}
 	for _, u := range users {
 		wcuts := wordcut.Segment(reg.ReplaceAllString(u.Message, ""))
