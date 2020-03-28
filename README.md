@@ -17,24 +17,20 @@ Note: If you run by dockerfile , Some API path use much time for request that if
 ## API
   - /users/daily/message
 get number of daily mewssages
-<img width="1440" alt="daily-message" src="https://user-images.githubusercontent.com/45779140/77818055-11c1ac80-7102-11ea-9600-cee69d57b79e.png">
+<img width="1440" alt="daily-message" src="https://user-images.githubusercontent.com/45779140/77818480-497e2380-7105-11ea-9408-70e3bb046a8b.png">
 
   - /users/accounts/10-message
 get top 10 accounts by messages
-<img width="1440" alt="10-account by message" src="https://user-images.githubusercontent.com/45779140/77818084-51889400-7102-11ea-9447-535097e07095.png">
+<img width="1440" alt="10-accounts by messages" src="https://user-images.githubusercontent.com/45779140/77818487-5d298a00-7105-11ea-85ec-c2d44096fad6.png">
 
   - /users/messages/10-engagement
 get top 10 messages by engagements
-<img width="1440" alt="10-message by engagement" src="https://user-images.githubusercontent.com/45779140/77818126-99a7b680-7102-11ea-8f2b-f3d69ea1b0d6.png">
+<img width="1440" alt="10-messages by engagements" src="https://user-images.githubusercontent.com/45779140/77818494-6b77a600-7105-11ea-8bc6-a671631d4d6c.png">
 
   - /users/messages/word-clouds
  generate word clouds you can see the file in result/word_clouds.png ( In github , I generated it if you want to see before run this request ) 
-<img width="1440" alt="wordclouds" src="https://user-images.githubusercontent.com/45779140/77818142-ba700c00-7102-11ea-839d-b0fd6756d775.png">
+<img width="1440" alt="word clouds" src="https://user-images.githubusercontent.com/45779140/77818498-792d2b80-7105-11ea-9302-a03cca4b1fca.png">
 
   - /users/messages/hashtag-clouds
  generate hashtag clouds you can see the file in result/hashtag_clouds.png ( In github , I generated it if you want to see before run this request ) 
- <img width="1440" alt="hashtagcloulds" src="https://user-images.githubusercontent.com/45779140/77818203-379b8100-7103-11ea-9596-f64744a3f218.png">
-
-
-
- 
+<img width="1440" alt="hashtag clouds" src="https://user-images.githubusercontent.com/45779140/77818502-88ac7480-7105-11ea-8c36-009a3a075c64.png"> 
