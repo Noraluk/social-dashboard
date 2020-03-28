@@ -1,9 +1,11 @@
 package user
 
 import (
+	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"regexp"
 	"social-dashboard/api/constants"
 	"social-dashboard/api/models/user"
@@ -26,6 +28,12 @@ type MessageCount struct {
 }
 
 func CreateUsers() error {
+	fileURL := "https://s3-ap-southeast-1.amazonaws.com/wisesight-public/dev-test/rawdata.csv"
+
+	if err := downloadFile("./rawdata.csv", fileURL); err != nil {
+		return err
+	}
+
 	file, err := ioutil.ReadFile("./rawdata.csv")
 	if err != nil {
 		return err
@@ -35,6 +43,23 @@ func CreateUsers() error {
 	if err != nil {
 		return err
 	}
+	return err
+}
+
+func downloadFile(filepath string, url string) error {
+	resp, err := http.Get(url)
+	if err != nil {
+		return err
+	}
+	defer resp.Body.Close()
+
+	out, err := os.Create(filepath)
+	if err != nil {
+		return err
+	}
+	defer out.Close()
+
+	_, err = io.Copy(out, resp.Body)
 	return err
 }
 
